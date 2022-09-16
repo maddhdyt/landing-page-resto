@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* utilities */
+*{
+    font-family: 'Poppins';
+    transition: all ease .6s;
+}
+body{
+    background-color: #fbfbfb;
+}
+.active{
+    width: 100%;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+/* header */
+.header-area{
+    height: 130px;
+}
+/* main */
+.banner{
+    @apply w-full flex justify-center lg:justify-end items-center relative
+}
+.banner-img{
+    @apply lg:w-11/12 rounded-3xl h-[560px] bg-slate-300 overflow-hidden cursor-pointer
+}
+.banner-desc{
+    @apply w-11/12 lg:w-[390px] p-6 rounded-3xl bg-white absolute bottom-4 lg:bottom-auto lg:left-0 lg:block
+}
+.grid-benefit{
+    @apply grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-5 mt-10
+}
+.benefit{
+    @apply flex flex-col items-center w-11/12 mx-auto lg:mx-0 lg:w-auto h-[350px] pt-7 bg-white rounded-3xl relative overflow-hidden
+}
+.benefit-logo{
+    @apply flex items-center justify-center w-20 h-20 rounded-full bg-main bg-opacity-30
+}
+.chef-logo{
+    @apply flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-main bg-opacity-30
+}
+.resto{
+    @apply h-[475px] bg-slate-200 rounded-3xl overflow-hidden cursor-pointer relative
+}
+@media only screen and (max-width: 600px){
+    .container{
+        width: 85%;
+    }
+    .header-area{
+        height: 100px;
+    }
+}
