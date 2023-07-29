@@ -18,12 +18,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <title>Landing page restaurant</title>
 </head>
-<style>
-
-</style>
 
 <body>
     <header class="header-area">
@@ -246,8 +242,8 @@
                             &nbsp;></span></a></div>
 
                 </div>
-                <div class="w-full lg:w-[60%] grid grid-cols-1 lg:grid-cols-11 gap-4">
-                    <div class="resto col-span-1 lg:col-span-5">
+                <div id="cards" class="w-full lg:w-[60%] grid grid-cols-1 lg:grid-cols-11 gap-4">
+                    <!-- <div class="resto col-span-1 lg:col-span-5">
                         <img src="assets/images/image_1.png" class="w-full h-full object-cover">
                         <div class="p-5 w-full absolute bottom-0">
                             <div class="flex justify-between p-5 bg-slate-100 rounded-3xl cursor-default">
@@ -318,7 +314,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- view all mobile -->
                     <div class="lg:hidden mt-5"><a href=""
                             class="font-semibold text-slate-800 py-4 block text-center rounded-xl bg-main">View All
@@ -449,7 +445,8 @@
                             <h4 class="text-blue font-semibold mb-2">Top 4 Expert Chefs</h4>
                             <h3 class="font-semibold text-2xl">Expert Chefs in Fuddy</h3>
                         </div>
-                        <div class="flex flex-col lg:flex-row items-center justify-between p-5 rounded-3xl bg-white group cursor-pointer">
+                        <div
+                            class="flex flex-col lg:flex-row items-center justify-between p-5 rounded-3xl bg-white group cursor-pointer">
                             <div class="text-center lg:text-start">
                                 <h6 class="text-slate-600 mb-2">PIZZA</h6>
                                 <h5 class="text-2xl font-semibold mb-2">Phoenix Satcheup</h5>
@@ -461,7 +458,8 @@
                                 Profile Detail >
                             </a>
                         </div>
-                        <div class="flex flex-col lg:flex-row items-center justify-between p-5 mt-6 rounded-3xl hover:bg-white group cursor-pointer">
+                        <div
+                            class="flex flex-col lg:flex-row items-center justify-between p-5 mt-6 rounded-3xl hover:bg-white group cursor-pointer">
                             <div class="text-center lg:text-start">
                                 <h6 class="text-slate-600 mb-2">VEGAN</h6>
                                 <h5 class="text-2xl font-semibold mb-2">Chamber Botfrag</h5>
@@ -473,7 +471,8 @@
                                 Profile Detail >
                             </a>
                         </div>
-                        <div class="flex flex-col lg:flex-row items-center justify-between p-5 mt-6 rounded-3xl hover:bg-white group cursor-pointer">
+                        <div
+                            class="flex flex-col lg:flex-row items-center justify-between p-5 mt-6 rounded-3xl hover:bg-white group cursor-pointer">
                             <div class="text-center lg:text-start">
                                 <h6 class="text-slate-600 mb-2">ROAST CHICKEN</h6>
                                 <h5 class="text-2xl font-semibold mb-2">Asep Vandal</h5>
@@ -485,7 +484,8 @@
                                 Profile Detail >
                             </a>
                         </div>
-                        <div class="flex flex-col lg:flex-row items-center justify-between p-5 mt-6 rounded-3xl hover:bg-white group cursor-pointer">
+                        <div
+                            class="flex flex-col lg:flex-row items-center justify-between p-5 mt-6 rounded-3xl hover:bg-white group cursor-pointer">
                             <div class="text-center lg:text-start">
                                 <h6 class="text-slate-600 mb-2">BEEF STEAK</h6>
                                 <h5 class="text-2xl font-semibold mb-2">I MADE INVOKER</h5>
@@ -498,12 +498,12 @@
                             </a>
                         </div>
                         <div class="w-full flex justify-center lg:justify-start">
-                            <button class="py-4 px-7 rounded-xl bg-main mt-10 font-semibold">View All Chef  ></button>
+                            <button class="py-4 px-7 rounded-xl bg-main mt-10 font-semibold">View All Chef ></button>
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="mb-16"></div>
+            <div id="header-resto" class="mb-16"></div>
             <!-- </end container> -->
         </div>
     </main>
@@ -511,68 +511,8 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="vendor/carousel/dist/owl.carousel.js"></script>
+    <script src="js/api.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        const Resto = document.getElementsByClassName("resto")
-        const restoDesc = document.getElementsByClassName("resto-desc")
-        const restoBtn = document.getElementsByClassName("resto-button")
-
-        Resto[0].addEventListener("mouseover", function () {
-            Resto[2].classList.remove('lg:col-span-5');
-            Resto[2].classList.add('lg:col-span-3');
-            Resto[1].classList.remove('lg:col-span-5');
-            Resto[1].classList.add('lg:col-span-3');
-            Resto[0].classList.remove('lg:col-span-3');
-            Resto[0].classList.add('lg:col-span-5');
-            restoDesc[1].classList.add('hidden');
-            restoBtn[1].classList.remove('justify-end');
-            restoBtn[1].classList.add('w-full', 'justify-center');
-            restoDesc[2].classList.add('hidden');
-            restoBtn[2].classList.remove('justify-end');
-            restoBtn[2].classList.add('w-full', 'justify-center');
-            // add
-            restoDesc[0].classList.remove('hidden');
-            restoBtn[0].classList.remove('w-full', 'justify-center');
-            restoBtn[0].classList.add('justify-end');
-        });
-        Resto[1].addEventListener("mouseover", function () {
-            Resto[0].classList.remove('lg:col-span-5');
-            Resto[0].classList.add('lg:col-span-3');
-            Resto[2].classList.remove('lg:col-span-5');
-            Resto[2].classList.add('lg:col-span-3')
-            Resto[1].classList.remove('lg:col-span-3');
-            Resto[1].classList.add('lg:col-span-5');
-            restoDesc[0].classList.add('hidden');
-            restoBtn[0].classList.remove('justify-end');
-            restoBtn[0].classList.add('w-full', 'justify-center');
-            restoDesc[2].classList.add('hidden');
-            restoBtn[2].classList.remove('justify-end');
-            restoBtn[2].classList.add('w-full', 'justify-center');
-            // add desc
-            restoDesc[1].classList.remove('hidden');
-            restoBtn[1].classList.add('justify-end');
-            restoBtn[1].classList.remove('w-full', 'justify-center');
-        });
-        Resto[2].addEventListener("mouseover", function () {
-            Resto[0].classList.remove('lg:col-span-5');
-            Resto[0].classList.add('lg:col-span-3');
-            Resto[1].classList.remove('lg:col-span-5');
-            Resto[1].classList.add('lg:col-span-3');
-            Resto[2].classList.remove('lg:col-span-3');
-            Resto[2].classList.add('lg:col-span-5');
-            restoDesc[0].classList.add('hidden');
-            restoBtn[0].classList.remove('justify-end');
-            restoBtn[0].classList.add('w-full', 'justify-center');
-            restoDesc[1].classList.add('hidden');
-            restoBtn[1].classList.remove('justify-end');
-            restoBtn[1].classList.add('w-full', 'justify-center');
-            // add desc
-            restoDesc[2].classList.remove('hidden');
-            restoBtn[2].classList.add('justify-end');
-            restoBtn[2].classList.remove('w-full', 'justify-center');
-        });
-
-    </script>
 </body>
 
 </html>

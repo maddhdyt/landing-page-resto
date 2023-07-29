@@ -1139,6 +1139,26 @@ body{
   background-color: #fbfbfb;
 }
 
+@media (min-width: 1024px) {
+  #cards .resto {
+    grid-column: span 3 / span 3;
+  }
+}
+
+#cards .resto .resto-desc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  #cards .resto:first-child {
+    grid-column: span 5 / span 5;
+  }
+}
+
+#cards .resto:first-child .resto-desc {
+  display: block;
+}
+
 .active{
   width: 100%;
 }
@@ -1348,12 +1368,12 @@ body{
     bottom: 2.5rem;
   }
 
-  .lg\:col-span-5 {
-    grid-column: span 5 / span 5;
-  }
-
   .lg\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5;
   }
 
   .lg\:mx-0 {

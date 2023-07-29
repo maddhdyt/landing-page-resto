@@ -10,6 +10,23 @@
 body{
     background-color: #fbfbfb;
 }
+
+#cards .resto {
+    @apply lg:col-span-3
+}
+
+#cards .resto .resto-desc {
+    @apply hidden
+}
+
+#cards .resto:first-child {
+    @apply lg:col-span-5
+}
+#cards .resto:first-child .resto-desc {
+    @apply block
+}
+
+
 .active{
     width: 100%;
 }
